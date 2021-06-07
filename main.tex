@@ -8,7 +8,7 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 %liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
 %toctotoc, % Uncomment to add the main table of contents to the table of contents
 %parskip, % Uncomment to add space between paragraphs
-%nohyperref, % Uncomment to not load the hyperref package
+nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
@@ -18,6 +18,10 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 \usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[none]{hyphenat}
 
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
@@ -38,6 +42,9 @@ headsepline, % Uncomment to get a line under the header
 	bottom=1.5cm, % Bottom margin
 	%showframe, % Uncomment to show how the type block is set on the page
 }
+
+\setlength{\parskip}{6mm}
+\setlength{\parindent}{0mm}
 
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION

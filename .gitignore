@@ -1,0 +1,9 @@
+*-blx.bib
+*.aux
+*.log
+*.blg
+*latexmk
+*.fls
+*.out
+*xml
+*gz
