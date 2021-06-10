@@ -23,6 +23,9 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{cleveref}
 \usepackage[none]{hyphenat}
 
+% render vectors in bold
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \addbibresource{example.bib} % The filename of the bibliography
@@ -43,7 +46,7 @@ headsepline, % Uncomment to get a line under the header
 	%showframe, % Uncomment to show how the type block is set on the page
 }
 
-\setlength{\parskip}{6mm}
+\setlength{\parskip}{5mm}
 \setlength{\parindent}{0mm}
 
 %----------------------------------------------------------------------------------------
@@ -242,9 +245,7 @@ The acknowledgments and the people to thank go here, don't forget to include you
 
 \include{chapters/chapter1}
 \include{chapters/chapter2}
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4}
-%\include{Chapters/Chapter5}
+\include{chapters/chapter3}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES

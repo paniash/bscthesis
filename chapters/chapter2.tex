@@ -10,23 +10,26 @@ In 1879, Edwin Hall was exploring this interaction and tried to determine the ef
 
 He later devised a rather simple experiment based on the argument that ``if the current of electricity in a fixed conductor is itself attracted by a magnet, the current should be drawn to one side of the wire, and therefore the resistance experienced should be increased." \autocite[1]{S.1880}
 
-Hall couldn't detect this extra resistance (which we now know as magnetoresistance) but concluded that a transverse force in the opposite direction must exist and which appears as a transverse voltage across the width of the conducting material. This is the Hall effect and the transverse voltage is the Hall voltage.
+Hall couldn't detect this extra resistance (which we now know as magnetoresistance) but concluded that a transverse force in the opposite direction must exist and which appears as a transverse voltage across the width of the conducting material. 
+This is the Hall effect and the transverse voltage is the Hall voltage.
 
 The experiment by Hall is shown in the figure below.
 
-\begin{figure}[h] \label{hall-figure} 
+\begin{figure}[h!] 
     \includegraphics[width=0.7\columnwidth]{hall-effect-ashcroft.png}
     \caption{Schematic diagram of the Hall effect}
+    \label{hall-figure} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \includegraphics[width=\columnwidth]{hall-effect-hurd.png}
     \caption{A more "self-explanatory" diagram of the Hall effect}
 \end{figure}
 
 \subsection{Mechanism of OHE}
 
-In the given figure, an electric current is passed along the $ x $ direction with corresponding current density is $ j_x $. The cause of this current is an external electric field along the same direction, $ E_x $.
+In the \cref{hall-figure} , an electric current is passed along the $ x $ direction with corresponding current density is $ j_x $. 
+The cause of this current is an external electric field along the same direction, $ E_x $.
 
 An external magnetic field $ H $ along the $ z $ direction is applied and the Hall effect is observed.
 
@@ -36,19 +39,26 @@ From the Lorentz force equation
     \vec{F} = q (\vec{E} + \vec{v} \times \vec{H})
 \end{equation}
 
-The second term of the \cref{lorentz} is responsible for deflecting the trajectory of the electrons in the negative $ y $-direction and accumulating along the sides of the material. As this accumulation takes place, an electric field builds up along the $ y $-direction which opposes the further deflection of electrons towards the sides. This process continues until an equilibrium is reached, at which this transverse field (or \textbf{Hall field}) $ E_y $ perfectly balances the Lorentz force and the current flows only along the longitudinal direction.
+The second term of the \cref{lorentz} is responsible for deflecting the trajectory of the electrons in the negative $ y $-direction and accumulating along the sides of the material. 
+As this accumulation takes place, an electric field builds up along the $ y $-direction which opposes the further deflection of electrons towards the sides. 
+This process continues until an equilibrium is reached, at which this transverse field (or \textbf{Hall field}) $ E_y $ perfectly balances the Lorentz force and the current flows only along the longitudinal direction.
 
 \subsection{Hall coefficient}
 
-This transverse Hall field $ E_y $ can be thought of to be proportional to the external magnetic field $ H $ and longitudinal current density $ j_x $. Here, we define the Hall coefficient as
+This transverse Hall field $ E_y $ can be thought of to be proportional to the external magnetic field $ H $ and longitudinal current density $ j_x $. 
+Here, we define the Hall coefficient as
 
 \begin{equation} \label{hall-coeff} 
     R_H = \frac{E_y}{j_x H} 
 \end{equation}
 
-A rather interesting point to note is that by our construction, $ j_x $ and $ H $ are along positive $ x $ and $ z $ directions respectively. $ E_y $ however, is along negative $ y $ direction, meaning that the resultant sign of the Hall coefficient $ R_H $ is negative.
+A rather interesting point to note is that by our construction, $ j_x $ and $ H $ are along positive $ x $ and $ z $ directions respectively. 
+$ E_y $ however, is along negative $ y $ direction, meaning that the resultant sign of the Hall coefficient $ R_H $ is negative.
 
-Now, imagine if the charge carriers were positive, this would result in their velocity along $ x $-direction to get reversed ($ j_x $ would still be along positive $ x $-direction). The Lorentz force would remain unchanged (as can be seen from \cref{lorentz}). Consequentially, the direction of Hall field would be in the opposite direction compared to its direction in the case of negatively charged carriers. This would mean that measuring the Hall coefficient of a material, would help one determine the sign of the charge carriers.
+Now, imagine if the charge carriers were positive, this would result in their velocity along $ x $-direction to get reversed ($ j_x $ would still be along positive $ x $-direction). 
+The Lorentz force would remain unchanged (as can be seen from \cref{lorentz}). 
+Consequentially, the direction of Hall field would be in the opposite direction compared to its direction in the case of negatively charged carriers. 
+This would mean that measuring the Hall coefficient of a material, would help one determine the sign of the charge carriers.
 
 \subsubsection{Calculating the Hall coefficient}
 
@@ -91,10 +101,80 @@ where $ n $ is the number density of the charge carriers.
 
 This is a rather astonishing result, suggesting that the Hall coefficient of a material, depends solely on the density of the carriers.
 
+We then define Hall resistivity $ \rho_H $ as the Hall field $ E_y $ per unit longitudinal current density $ j_x $, which is given by
+
+\begin{equation} \label{hall-resistivity} 
+    \rho_H = \frac{E_H}{j_x} = R_H H
+\end{equation}
+
+where the symbols have their usual meanings.
+
 We shall stop our investigation of the Ordinary Hall effect in lieu of the main topic of the report.
 
-\section{Anomalous Hall effect}
+\section{Anomalous Hall effect (AHE)}
 
-The previous section dealt with OHE where the nature of the current carrying material is immaterial. Now, we deal with specific characteristics of such material, namely, magnetic metals.
+The previous section dealt with OHE where the nature of the current carrying material is immaterial. 
+Now, we deal with specific characteristics of such material, namely, magnetic metals.
 
-It is observed that when observing Hall effect in such magnetic materials, certain unusual results are observed.
+It is observed that when observing Hall effect in such magnetic materials, in addition to OHE, certain unusual phenomena are observed.
+
+In low-field conditions as seen from \cref{hall-resistivity}, the observed Hall resistivity $ \rho_H $ varies linearly with external magnetic field $ H $ with the slope given by the Hall coefficient $ R_H $. 
+For illustration purposes, the example of Hall resistivity $ \rho_H $ has been used. 
+The trend is the same for Hall field $ E_H $ as can be observed from \cref{hall-resistivity}.
+
+What about magnetic metals? 
+In such materials, a linear but rapid rise in the Hall field is seen with increasing external magnetic field $ \vec{H} $. 
+This is followed by a secondary linear rise (with a lower gradient compared to the first). 
+This is depicted in \cref{fig:hall-rho-linear} 
+
+\begin{figure}[h!]
+    \includegraphics[width=\columnwidth]{hall-rho-hurd.png}
+    \caption{Schematic behaviour of the Hall resistivity $ \rho_H $ as a function of magnetic induction $ \vec{B} $ in a metal showing appreciable magnetization.}
+    \label{fig:hall-rho-linear} 
+\end{figure}
+
+In this case, the Hall effect is not simply from the application of Lorentz force on the charge carriers but rather seen as an \textit{anomaly} and is therefore known as the \textbf{anomalous Hall effect.} 
+
+
+\subsection{Mechanism of AHE}
+
+It has been shown empirically that this anomalous behaviour can be explained by a superposition of OHE and a strongly temperature dependent term. 
+The curve shown in \cref{fig:hall-rho-linear} 
+can be empirically fitted by the following equation (in CGS units):
+
+\begin{equation} \label{ahe} 
+    \rho_H = R_0 B + 4 \pi R_s M
+\end{equation}
+
+where $ B $ is the applied magnetic field, $ R_0 $ is the ordinary Hall coefficient, $ M $ is the magnetization of the material, $ R_s $ is the spontaneous Hall coefficient.
+
+The first term in \cref{ahe} accounts for OHE and is characterized by the more familiar \cref{hall-resistivity}, whereas the second term is a characteristic of magnetic materials. 
+This magnetization $ \vec{M} $ can be present even without the presence of an external magnetic field $ \vec{B} $, especially in ferromagnetic materials.
+
+Especially in the case of ferromagnets, $ R_s $ is experimentally found to be strongly temperature dependent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Spin Hall effect (SHE)}
+
+In this type of Hall effect, we generally deal with non-magnetic (or weakly magnetic) materials. 
+For example, a paramagnetic material or a ferromagnetic material beyond its Curie temperature.
+Strictly speaking, an external magnetic field is not \textit{mandatory} to observed SHE.
+
+In layman terms, SHE reduces to the following: \textit{Spin accumulation at the lateral boundaries of the material, with the directions of spins being opposite at the opposing sides.}
+
+This phenomena is very similar and analogous to OHE, the only difference being that instead of opposite charge accumulation on lateral sides, electrons with opposite spins get accumulated.
+
+
+
