@@ -7,3 +7,6 @@
 *.out
 *xml
 *gz
+*bcf
+*bbl
+*run*
