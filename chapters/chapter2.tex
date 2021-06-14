@@ -183,8 +183,42 @@ We shall discuss the plausible mechanisms responsible for the spin Hall effect i
 
 \subsection{Spin Current}
 
+A pure spin current can be defined as the flow of electrons of spin $ \uparrow $ moving in one direction and electrons of the opposite spin i.e. $ \downarrow $ electrons moving along the opposite direction.
+This results in no net charge current (since rate of movement of electrons in opposing directions is the same) and a net flow of angular momentum \cite{krishnan2016fundamentals}.
+
+\subsubsection{Mathematical analysis}
+
+From the continuity equation,
+
+\begin{equation} \label{continuity}
+    \nabla \vec{J} + \frac{\partial \rho}{\partial t} = 0
+\end{equation}
+
+where $ \vec{J} $ is the current density and $ \rho $ is the charge density.
+
+This \cref{continuity} implies charge conservation law and helps us define the charge current \cite{jackson1999classical}.
+
+Analogously, we can define the spin current density $ \vec{J}_s $ with reference to conservation of spin angular momentum. Considering that spin angular momentum is conserved, we can then define the corresponding continuity equation as
+
+\begin{equation} \label{spin-current-density}
+    \nabla \vec{J}_s + \frac{\partial \vec{M}}{\partial t} = 0
+\end{equation}
+
+where $ \vec{M} $ is the magnetization (magnetic moment per unit volume) of the sample. The \cref{spin-current-density} defines the spin current density $ \vec{j}_s $ \cite{Uchida_2016}.
+
+\begin{figure}[h!]
+    \includegraphics[width=\columnwidth]{spin-current.png}
+    \caption{The total sum of rate of all charge variations across a surface is equal to the total current entering the surface.\\ \vspace{0.2cm} \textit{Image credit: "Spin Current", Ken-ichi Uchida and Eiji Saitoh}}
+\end{figure}
 
 
+In real solids for most of the cases, the conservation of spin angular momentum is a good approximation. However, in general, the conservation does not hold true due to spin relaxation (due to collisions with impurities in the solid, the spins of the electrons does not remain polazized) \cite{Uchida_2016}. This gives rise to a modified version of \cref{spin-current-density} as:
+
+\begin{equation}
+    \nabla \vec{J}_s + \frac{\partial \vec{M}}{\partial t} = -\vec{T}
+\end{equation}
+
+where $ \vec{T} $ is an indicator of the non-conservation of spin angular momentum (due to spin relaxation and spin generation) \cite{Uchida_2016}.
 
 \section{Inverse Spin Hall effect (ISHE)}
 
@@ -197,7 +231,7 @@ The \cref{she-vs-ishe} depicts the phenomena:
 
 \begin{figure}[h!]
     \includegraphics[width=\columnwidth]{ishe.png}
-    \caption{Comparison between SHE and ISHE.\\ \textit{Image credit: M.B Jungfleisch, PhD Thesis}}
+    \caption{Comparison between SHE and ISHE.\\ \vspace{0.2cm}\textit{Image credit: M.B Jungfleisch, PhD Thesis}}
     \label{she-vs-ishe}
 \end{figure}
 
