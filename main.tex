@@ -7,7 +7,6 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
 %liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
 %toctotoc, % Uncomment to add the main table of contents to the table of contents
-%parskip, % Uncomment to add space between paragraphs
 nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
@@ -55,7 +54,7 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{On Spin Hall Effect} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{Study on spin current in a NM/HM bilayer} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{Dr. Kartik \textsc{Senapati}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{P398} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
@@ -133,18 +132,17 @@ headsepline, % Uncomment to get a line under the header
 \noindent I, \authorname, declare that this thesis titled, \enquote{\ttitle} and the work presented in it are my own. I confirm that:
 
 \begin{itemize}
-\item This work was done wholly or mainly while in candidature for a research degree at this University.
-\item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
+\item This work was done wholly or mainly while in candidature as part of the coursework for sixth semester at this University.
 \item Where I have consulted the published work of others, this is always clearly attributed.
 \item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
 \item I have acknowledged all main sources of help.
 \item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
 \end{itemize}
 
-\noindent Signed:\\
-\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+% \noindent Signed: Ashish Panigrahi\\
+% \rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
 
-\noindent Date:\\
+\noindent Date: \today\\
 \rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
 \end{declaration}
 
@@ -190,16 +188,20 @@ I would also like to especially thank my collaborator, Mr. Tapas Ranjan Senapati
 
 %\listoftables % Prints the list of tables
 
-%%----------------------------------------------------------------------------------------
-%%	ABBREVIATIONS
-%%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
 
-%\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-%\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+\textbf{OHE} & \textbf{O}rdinary \textbf{H}all \textbf{E}effect\\
+\textbf{AHE} & \textbf{A}nomalous \textbf{H}all \textbf{E}effect\\
+\textbf{SHE} & \textbf{S}pin \textbf{H}all \textbf{E}effect\\
+\textbf{ISHE} & \textbf{I}nverse \textbf{S}pin \textbf{H}all \textbf{E}effect\\
+\textbf{NM} &  \textbf{N}ormal \textbf{M}etal\\
+\textbf{HM} &  \textbf{H}eavy \textbf{M}etal\\
 
-%\end{abbreviations}
+\end{abbreviations}
 
 %%----------------------------------------------------------------------------------------
 %%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
@@ -236,40 +238,18 @@ I would also like to especially thank my collaborator, Mr. Tapas Ranjan Senapati
 
 %\dedicatory{For/Dedicated to/To my\ldots}
 
-%----------------------------------------------------------------------------------------
-%	THESIS CONTENT - CHAPTERS
-%----------------------------------------------------------------------------------------
-
 \mainmatter % Begin numeric (1,2,3...) page numbering
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
 
-% Include the chapters of the thesis as separate files from the Chapters folder
-% Uncomment the lines as you write the chapters
+\tableofcontents
 
 \include{chapters/chapter1}
 \include{chapters/chapter2}
 \include{chapters/chapter3}
 
-%----------------------------------------------------------------------------------------
-%	THESIS CONTENT - APPENDICES
-%----------------------------------------------------------------------------------------
-
-% \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
-
-% Include the appendices of the thesis as separate files from the Appendices folder
-% Uncomment the lines as you write the Appendices
-
-% \include{Appendices/AppendixA}
-%\include{Appendices/AppendixB}
-%\include{Appendices/AppendixC}
-
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
 
 \printbibliography
 
-%----------------------------------------------------------------------------------------
 
 \end{document}
