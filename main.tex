@@ -5,8 +5,6 @@ english, % ngerman for German
 singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
-%toctotoc, % Uncomment to add the main table of contents to the table of contents
 nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
@@ -16,18 +14,20 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
-% \usepackage{charter}
 \usepackage{tgschola}
+% \usepackage{mathpazo}
 
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage[none]{hyphenat}
+\usepackage{tikz}
+
 
 % render vectors in bold
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 
-\usepackage[backend=biber,style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \addbibresource{references.bib} % The filename of the bibliography
 
@@ -128,7 +128,6 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \begin{declaration}
-\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
 \noindent I, \authorname, declare that this thesis titled, \enquote{\ttitle} and the work presented in it are my own. I confirm that:
 
 \begin{itemize}
@@ -164,7 +163,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+This is your abstract.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -178,19 +177,9 @@ I would like to take this opportunity to thank my supervisor, Dr. Kartik Senapat
 I would also like to especially thank my collaborator, Mr. Tapas Ranjan Senapati, who guided me in working with the instruments and made sure that I understood the relevant concepts required for the project.
 \end{acknowledgements}
 
-%%----------------------------------------------------------------------------------------
-%%	LIST OF CONTENTS/FIGURES/TABLES PAGES
-%%----------------------------------------------------------------------------------------
+\tableofcontents % Prints the main table of contents
 
-%\tableofcontents % Prints the main table of contents
-
-%\listoffigures % Prints the list of figures
-
-%\listoftables % Prints the list of tables
-
-%----------------------------------------------------------------------------------------
-%	ABBREVIATIONS
-%----------------------------------------------------------------------------------------
+\listoffigures % Prints the list of figures
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
@@ -200,6 +189,7 @@ I would also like to especially thank my collaborator, Mr. Tapas Ranjan Senapati
 \textbf{ISHE} & \textbf{I}nverse \textbf{S}pin \textbf{H}all \textbf{E}effect\\
 \textbf{NM} &  \textbf{N}ormal \textbf{M}etal\\
 \textbf{HM} &  \textbf{H}eavy \textbf{M}etal\\
+\textbf{SOC} &  \textbf{S}pin \textbf{O}rbit \textbf{C}oupling\\
 
 \end{abbreviations}
 
@@ -242,11 +232,10 @@ I would also like to especially thank my collaborator, Mr. Tapas Ranjan Senapati
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
 
-\tableofcontents
-
 \include{chapters/chapter1}
 \include{chapters/chapter2}
 \include{chapters/chapter3}
+\include{chapters/chapter4}
 
 
 \printbibliography

@@ -1,4 +1,4 @@
-\chapter{Primer to Hall effects}
+\chapter{The Hall effects}
 
 \label{chapter2}
 
@@ -41,7 +41,7 @@ From the Lorentz force equation
 
 The second term of the \cref{lorentz} is responsible for deflecting the trajectory of the electrons in the negative $ y $-direction and accumulating along the sides of the material.
 As this accumulation takes place, an electric field builds up along the $ y $-direction which opposes the further deflection of electrons towards the sides.
-This process continues until an equilibrium is reached, at which this transverse field (or \textbf{Hall field}) $ E_y $ perfectly balances the Lorentz force and the current flows only along the longitudinal direction.
+This process continues until an equilibrium is reached, at which this transverse field (or \textbf{Hall field}) $ E_y $ perfectly balances the Lorentz force and the current flows only along the longitudinal direction \cite{ashcroft1976solid}.
 
 \subsection{Hall coefficient}
 
@@ -58,7 +58,7 @@ $ E_y $ however, is along negative $ y $ direction, meaning that the resultant s
 Now, imagine if the charge carriers were positive, this would result in their velocity along $ x $-direction to get reversed ($ j_x $ would still be along positive $ x $-direction).
 The Lorentz force would remain unchanged (as can be seen from \cref{lorentz}).
 Consequentially, the direction of Hall field would be in the opposite direction compared to its direction in the case of negatively charged carriers.
-This would mean that measuring the Hall coefficient of a material, would help one determine the sign of the charge carriers.
+This would mean that measuring the Hall coefficient of a material, would help one determine the sign of the charge carriers \cite{ashcroft1976solid}.
 
 \subsubsection{Calculating the Hall coefficient}
 
@@ -99,7 +99,7 @@ This yields the Hall coefficient (\cref{hall-coeff}) to be
 
 where $ n $ is the number density of the charge carriers.
 
-This is a rather astonishing result, suggesting that the Hall coefficient of a material, depends solely on the density of the carriers.
+This is a rather astonishing result, suggesting that the Hall coefficient of a material, depends solely on the density of the carriers \cite{ashcroft1976solid}.
 
 We then define Hall resistivity $ \rho_H $ as the Hall field $ E_y $ per unit longitudinal current density $ j_x $, which is given by
 
@@ -146,7 +146,7 @@ can be empirically fitted by the following equation (in CGS units):
     \rho_H = R_0 B + \mu_0 R_s M
 \end{equation}
 
-where $ B $ is the applied magnetic field, $ R_0 $ is the ordinary Hall coefficient, $ M $ is the magnetization of the material, $ R_s $ is the anomalous Hall coefficient.
+where $ B $ is the applied magnetic field, $ R_0 $ is the ordinary Hall coefficient, $ M $ is the magnetization of the material, $ R_s $ is the anomalous Hall coefficient and \( \mu_0 \) is the permeability of free space.
 
 The first term in \cref{ahe} accounts for OHE and is characterized by the more familiar \cref{hall-resistivity}, whereas the second term is a characteristic of magnetic materials.
 This magnetization $ \vec{M} $ can be present even without the presence of an external magnetic field $ \vec{B} $, especially in ferromagnetic materials.
@@ -222,12 +222,12 @@ where $ \vec{T} $ is an indicator of the non-conservation of spin angular moment
 
 \section{Inverse Spin Hall effect (ISHE)}
 
-Contrary to SHE, the inverse Hall effect is essentially the same but SHE in reverse. When a spin current is supplied into a material (with no charge current), the same scattering mechanisms\footnotemark[\value{footnote}] in case of SHE, allow the spin-polarized electrons to preferentially scatter into opposite directions.
+Contrary to SHE, the inverse Hall effect is essentially the same but SHE in reverse. When a pure spin current is injected into a material (with no charge current), the same scattering mechanisms\footnotemark[\value{footnote}] in case of SHE, allow the spin-polarized electrons to preferentially scatter into opposite directions.
 
 The spin $\uparrow$ electrons scatter along one direction and the spin $\downarrow$ electrons scatter along another direction. The surprising aspect about this, is that \textbf{both the directions are the same!}
 This leads to a pure charge current.
 
-The \cref{she-vs-ishe} depicts the phenomena:
+The \cref{she-vs-ishe} is a schematic representation of the phenomena:
 
 \begin{figure}[h!]
     \includegraphics[width=\columnwidth]{ishe.png}
