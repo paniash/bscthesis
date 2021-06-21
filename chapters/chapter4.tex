@@ -12,12 +12,20 @@ In our study, we intend to explore the detection of spin current in a NM/HM bila
 
 \section{Preparation of sample}
 
+We prepare a trilayer system, using copper (Cu) as the NM and platinum (Pt) as the HM. Here, we sandwich a layer of Cu between two layers of Pt. This is depicted in \cref{layers}.
+
 \begin{figure}
     \centering
 \begin{tikzpicture}
-    \draw (0,0) -- (5,0) -- (5,3) -- (0,3) -- cycle;
-    \draw (0,1) -- (5,1);
-    \draw (0,2) -- (5,2);
+    \draw [fill={rgb:black,1;white,2}] (0,0) rectangle (5,3);
+    \node at (2.5,2.5) {Pt};
+    \draw [fill={rgb:orange,1;yellow,2;pink,5}] (0,0) rectangle (5,2);
+    \node at (2.5,1.5) {Cu};
+    \draw [fill={rgb:black,1;white,2}] (0,0) rectangle (5,1);
+    \node at (2.5,0.5) {Pt};
+    \draw (-1,0) -- (6,0);
+    \node at (2.5,-0.5) {SiO$_2$};
 \end{tikzpicture}
     \caption{Schematic diagram of trilayer sample}
+    \label{layers}
 \end{figure}
