@@ -4,11 +4,15 @@
 
 In this chapter, we discuss about the techniques and methods used to devise an experiment involving a Pt-Cu bilayer system and subsequently investigate the effect of spin current via SHE.
 
-\section{Experimental plan}
+\section{Experimental plan} \label{sec:plan}
 
 In earlier studies, it has been shown that a pure spin current can be generated and manipulated via a heavy metal through SHE \cite{hirsch1999spin,sinova2004universal,zhang2000spin}. The detection of this spin current can only be done via conversion into charge current (which is measurable) using ISHE. This generally involves a ferromagnetic layer or a magneto-optical method \cite{kimura2007room,li2019spin,stamm2017magneto}.
 
-In our study, we intend to explore the detection of spin current in a NM/HM bilayer system without a magnetic layer.
+In our study, we intend to explore the detection of spin current in a NM/HM bilayer system without a magnetic layer, i.e. via electrical means such as using a simple voltmeter.
+
+In many studies involving the electrical detection of spin current, pure spin current is generated using a ferromagnet, which then gets converted to charge current via ISHE, and is hence, detectable using a voltmeter.
+
+Contrary to the above method, we do not generate pure spin current beforehand, but rather provide a pure charge current as supply to our sample, which is converted to spin current via SHE and is converted back to charge current via ISHE. Keeping this in mind, we design our sample accordingly.
 
 \section{Preparation of sample}
 
@@ -17,15 +21,30 @@ We prepare a trilayer system, using copper (Cu) as the NM and platinum (Pt) as t
 \begin{figure}
     \centering
 \begin{tikzpicture}
-    \draw [fill={rgb:black,1;white,2}] (0,0) rectangle (5,3);
+    \draw [fill={rgb:black,1;white,4}] (0,0) rectangle (5,3);
     \node at (2.5,2.5) {Pt};
     \draw [fill={rgb:orange,1;yellow,2;pink,5}] (0,0) rectangle (5,2);
     \node at (2.5,1.5) {Cu};
-    \draw [fill={rgb:black,1;white,2}] (0,0) rectangle (5,1);
+    \draw [fill={rgb:black,1;white,4}] (0,0) rectangle (5,1);
     \node at (2.5,0.5) {Pt};
     \draw (-1,0) -- (6,0);
     \node at (2.5,-0.5) {SiO$_2$};
 \end{tikzpicture}
-    \caption{Schematic diagram of trilayer sample}
+    \caption{Side view of the trilayer sample}
     \label{layers}
 \end{figure}
+
+Now, as mentioned in \cref{sec:plan}, we intend to make the shape of our sample to facilitate the conversion to charge to spin current and vice versa.
+Now, as seen in %insert section depicting SHE and ISHE regarding perpendicular conversion
+we see that converted spin current, flows perpendicular to the original charge current and similarly during the back conversion via ISHE.
+For this, an obvious structural shape would be a path that has two paths, connected via a link being perpendicular to both the paths simultaneously.
+Hence, a "H"-like structure comes to mind, which is implemented in our experimental setup.
+
+\subsection{Photolithography}
+
+\begin{figure}[h!]
+    \includegraphics[width=\columnwidth]{newtrack.png}
+    \caption{Patterned Cu/Pt trilayer}
+\end{figure}
+
+\subsection{Magnetron sputtering}
