@@ -1,6 +1,7 @@
 *-blx.bib
 *.aux
 *.log
+*.lof
 *.blg
 *latexmk
 *.fls
