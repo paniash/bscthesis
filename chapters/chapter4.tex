@@ -50,3 +50,36 @@ Hence, a "H"-like structure comes to mind, which is implemented in our experimen
 \subsection{Magnetron sputtering}
 
 Through this method, the layer of Cu and Pt are deposited on the Si$O_2$ wafer at an even thickness, to make the whole sample.
+
+
+% TODO: Finish sample preparation section
+
+\section{Measurement}
+
+After the sample is prepared, we pass electrical (pure charge) current through one arm of the \textit{H}-structure and make voltage measurements across the opposite ends of the sample, as shown in \cref{fig:measurement} . This is commonly called a non-local measurement.
+
+\begin{figure}
+\centering
+    \begin{circuitikz}[american]
+    \draw[thick] (0,0) rectangle (4,10);
+    \draw[thick] (0,4.5) -- (-3,4.5);
+    \draw[thick] (4,4.5) -- (7,4.5);
+    \draw[thick] (0,6) -- (-3,6);
+    \draw[thick] (4,6) -- (7,6);
+    \draw[thick] (-3,4.5) -- (-3,6);
+    \draw[thick] (7,6) -- (7,4.5);
+    \draw (-3,5.25) -- (-4,5.25);
+    \draw (-4,-1)
+    to[isource, l=$I$] (-4,5.25);
+    \draw (-4,-1) -- (2,-1);
+    \draw (2,-1) -- (2,0);
+    \draw (2,10) -- (2,11);
+    % \draw (2,11) -- (8,11);
+    \draw (2,11)
+    to[V, l=$V$] (8,11);
+    \draw (8,11) -- (8,5.25);
+    \draw (8,5.25) -- (7,5.25);
+\end{circuitikz}
+    \caption{Pure charge current is supplied across the left arm and the potential difference is measured across the right arm of the sample.}
+    \label{fig:measurement}
+\end{figure}
