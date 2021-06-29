@@ -51,14 +51,17 @@ Hence, a "H"-like structure comes to mind, which is implemented in our experimen
 
 Through this method, the layer of Cu and Pt are deposited on the Si$O_2$ wafer at an even thickness, to make the whole sample.
 
+\section{Focused Ion Beam}
+
+
 
 % TODO: Finish sample preparation section
 
 \section{Measurement}
 
-After the sample is prepared, we pass electrical (pure charge) current through one arm of the \textit{H}-structure and make voltage measurements across the opposite ends of the sample, as shown in \cref{fig:measurement} . This is commonly called a non-local measurement.
+After the sample is prepared, we pass electrical (pure charge) current through one arm of the \textit{H}-structure and make voltage measurements across the opposite ends of the sample, as shown in \cref{fig:measurement}. This is technically called a non-local measurement.
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
     \begin{circuitikz}[american]
     \draw[thick] (0,0) rectangle (4,10);
@@ -74,12 +77,19 @@ After the sample is prepared, we pass electrical (pure charge) current through o
     \draw (-4,-1) -- (2,-1);
     \draw (2,-1) -- (2,0);
     \draw (2,10) -- (2,11);
-    % \draw (2,11) -- (8,11);
     \draw (2,11)
     to[V, l=$V$] (8,11);
     \draw (8,11) -- (8,5.25);
     \draw (8,5.25) -- (7,5.25);
+    \draw (-2.25,0) -- (75:3.5cm);
+    % \draw (1.25,3.25) -- (-2,0);
+    % \draw (1.25,3.25) -- (-0.25,4.75);
+    % \draw (-0.25,4.75) -- (
 \end{circuitikz}
     \caption{Pure charge current is supplied across the left arm and the potential difference is measured across the right arm of the sample.}
     \label{fig:measurement}
 \end{figure}
+
+\subsection{Final steps}
+
+After making the voltage measurements via voltmeter, the measurement readings are analyzed\footnote{Done in the following chapter.}.
