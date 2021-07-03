@@ -6,11 +6,11 @@ In this chapter, we discuss about the techniques and methods used to devise an e
 
 \section{Experimental plan} \label{sec:plan}
 
-In earlier studies, it has been shown that a pure spin current can be generated and manipulated via a heavy metal through SHE \cite{hirsch1999spin,sinova2004universal,zhang2000spin}. The detection of this spin current can only be done via conversion into charge current (which is measurable) using ISHE. This generally involves a ferromagnetic layer or a magneto-optical method \cite{kimura2007room,li2019spin,stamm2017magneto}.
+In earlier studies, it has been shown that a pure spin current can be generated and manipulated via a heavy metal through SHE \cite{hirsch1999spin,sinova2004universal,zhang2000spin}. The detection of this spin current can only be done via conversion into charge current (which is measurable) using ISHE. This generally involves a ferromagnetic layer or a magneto-optical method \cite{kimura2007room,li2019spin,stamm2017magneto,valenzuela2007electrical}.
 
-In our study, we intend to explore the detection of spin current in a NM/HM bilayer system without a magnetic layer, i.e. via electrical means such as using a simple voltmeter.
+In our study, we intend to explore the detection of spin current in a NM/HM trilayer system without a magnetic layer, i.e. via electrical means such as using a simple voltmeter.
 
-In many studies involving the electrical detection of spin current, pure spin current is generated using a ferromagnet, which then gets converted to charge current via ISHE, and is hence, detectable using a voltmeter.
+In many studies involving the electrical detection of spin current, pure spin current is generated using a ferromagnet at one end of the sample structure, which then gets converted to charge current via ISHE, and is subsequently, detectable using a voltmeter at the other end of the structure (which is usually a non-magnetic metal with high spin-orbit coupling).
 
 Contrary to the above method, we do not generate pure spin current beforehand, but rather provide a pure charge current as supply to our sample, which is converted to spin current via SHE and is converted back to charge current via ISHE. Keeping this in mind, we design our sample accordingly.
 
@@ -38,7 +38,7 @@ Now, as mentioned in \cref{sec:plan}, we intend to make the shape of our sample 
 Now, as seen in %insert section depicting SHE and ISHE regarding perpendicular conversion
 we see that converted spin current, flows perpendicular to the original charge current and similarly during the back conversion via ISHE.
 For this, an obvious structural shape would be a path that has two paths, connected via a link being perpendicular to both the paths simultaneously.
-Hence, a "H"-like structure comes to mind, which is implemented in our experimental setup.
+Hence, a \textsc{H}-like structure comes to mind, which is implemented in our experimental setup.
 
 \subsection{Photolithography}
 
@@ -51,11 +51,35 @@ Hence, a "H"-like structure comes to mind, which is implemented in our experimen
 
 Through this method, the layer of Cu and Pt are deposited on the Si$O_2$ wafer at an even thickness, to make the whole sample.
 
-\section{Focused Ion Beam}
+\subsection{Focused Ion Beam}
 
 
 
 % TODO: Finish sample preparation section
+
+\section{Detecting spin current}
+
+We proceed to highlight a clever method to measure the spin current in a sample as proposed in \cite{hirsch1999spin}.
+
+\begin{figure}[h!]
+    \includegraphics[width=\columnwidth]{hirsch.png}
+    \caption{Schematic diagram depicting method to measurement of spin current.\\ \vspace{0.2cm} \textit{Image courtesy: JE Hirsch. ``Spin Hall effect" (1999)}}
+    \label{fig:hirsch-measure}
+\end{figure}
+
+As depicted in \cref{fig:hirsch-measure}, a transverse strip of metal (with high SOC) connects both the transverse ends of the slab.
+Let charge current density \( j_x \) travel along the longitudinal direction.
+The width of the slab is \( L \) and the width of the transverse strip is \( l \).
+
+The same scattering mechanisms (refer \cref{sec:mechanisms}) responsible for the conversion of charge current to spin current in the first place, will also be responsible for the conversion in the reverse direction i.e. ISHE.
+This fact is exploited and the transverse metal strip is attached to the slab.
+As seen in the figure, charge current corresponding to \( j_x \) results in a spin imbalance across the edges of the slab due to SHE.
+This results in spin current\footnote{Described in the preliminary sections (refer \cref{sec:she})}.
+
+This spin current moves in a perpendicular direction compared to \( j_x \) but in the plane of the slab.
+Via the same scattering mechanisms, the spin polarized electrons get preferentially scattered depending on the direction of their spins, resulting in a charge imbalance which is seen along the edges of the tranverse metal strip.
+This charge imbalance gives rise to a potential difference across the strip, which can be measured by conventional electrical instruments such as a voltmeter.
+
 
 \section{Measurement}
 
@@ -90,7 +114,7 @@ After the sample is prepared, we pass electrical (pure charge) current through o
     \label{fig:measurement}
 \end{figure}
 
-\subsection{Efficacy of measurement}
+\subsection{Efficacy of the measurement}
 
 As seen in \cref{subsec:spin-angle}, the efficiency of conversion of spin current to charge current and vice versa is related to the spin Hall angle of the material.
 However, this efficiency is very poor in practical laboratory environments.
