@@ -1,21 +1,32 @@
 \chapter{Results}
 
+% TODO: Mention variation of length and width of the layers
+
 \label{chapter5}
 
 After making the aforementioned measurements, we proceed to analyze the resultant data.
 
-% \begin{figure}[h!]
-%     \includegraphics[width=\columnwidth]{vt-normal1.jpg}
-%     \caption{Plot for calibration of data against background potential difference.}
-% \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{vt-normal1.jpg}
+    \caption{Variation of voltage as a function of temperature at constant input current.}
+\end{figure}
 
-% \begin{figure}[h!]
-%     \includegraphics[width=\columnwidth]{vt-normal.jpg}
-%     \caption{}
-% \end{figure}
+Before the experiment is begun, we test if the sample track works as one expects.
+We supply a fixed value of input current and make voltage measurements at various temperatures of the sample.
+As expected, we end up with a \textit{voltage-vs-temperature} curve which is characteristic to that of a metal (Cu/Pt).
 
 \begin{figure}[h!]
-    \includegraphics[width=\columnwidth]{vt.jpg}
+    \centering
+    \includegraphics[scale=0.5]{vt-normal.jpg}
+    \caption{}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{vt.jpg}
     \caption{Variation of voltage for a range of temperature (\( \approx 2 \: K \) to \( 10 \: K \) at constant currents 1 \( \mu \)A and 500 \( \mu \)A).}
     \label{fig:vt}
 \end{figure}
@@ -26,13 +37,19 @@ On measuring the voltage for a range of temperature (from 2 K to 10 K) at a cons
 
 \begin{figure}[h!]
     \includegraphics[width=\columnwidth]{vh-compare.jpg}
-    \caption{At \( T = 2 \)K, variation of potential difference as input current is varied from -2 mA to +2 mA.}
+    \caption{At \( T = 2 \) K, variation of potential difference as input current is varied from -2 mA to +2 mA.}
     \label{fig:vh-compare}
 \end{figure}
 
-On varying the input current from -2 mA to +2 mA at a temperature of 2 $K$, we observe that there is a random variation of non-local voltage measurement in \cref{fig:vh-compare} for a number of runs of the experiment. This also yields no inferable data.
+On varying the input current from -2 mA to +2 mA at a temperature of 2 K, we observe that there is a random variation of non-local voltage measurement in \cref{fig:vh-compare} for a number of runs of the experiment. This unfortunately as well, yields no inferable data.
 
-\begin{figure}[h!]
+\subsection{Measurement via extrapolation in the presence of external \( B \) field}
+
+\begin{figure}
     \input{nonlocal-with-field.pgf}
     \caption{Plot of voltage \( V \) vs external magnetic field \( B \), in presence of an external magnetic field}
+    \label{fig:b-extrapolation}
 \end{figure}
+
+As suggested in \cref{subsubsec:extrapolation}, we expected to observe a predictable pattern which could then be extrapolated to find the intercept on the \( y \)-axix (voltage measurement).
+However, a very noisy data was observed with no scope for extrapolation (as seen in \cref{fig:b-extrapolation}).
