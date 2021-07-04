@@ -15,7 +15,7 @@ This gives preferential scattering of the carriers based on spin but with unequa
 A significant advantage of SHE over AHE is that the former doesn't require an external magnetic field to function.
 As long as the material in question possesses a high spin-orbit interaction, SHE is observed and the conversion of pure charge current (unpolarized electrons) gets converted into pure spin current (polarized electrons) with no charge current \cite{hirsch1999spin}.
 
-\subsection{Spin Hall angle (SHA)}
+\subsection{Spin Hall Angle (SHA)}
 
 \label{subsec:spin-angle}
 
@@ -29,10 +29,69 @@ where \( \sigma^s_{xy} \) is the transverse conductivity due to spin current, \(
 
 \( \theta_{SH} \) is the ratio of spin Hall conductivity to charge conductivity and quantifies the efficiency of conversion from charge to spin current and vice-versa.
 
-\subsection{Spin Orbit interaction}
+\subsection{An overview of spin orbit interaction}
 
-% TODO: Write section on spin orbit coupling
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{soc.png}
+    \caption{Relative motion of nucleus around the electron.\\ \vspace{0.2cm} \textit{Image courtesy: Binghai Yan, ``Spin-orbit coupling: A relativistic effect", Summer school on ``Topological Matter States 2016"}}
+    \label{fig:soc-atom}
+\end{figure}
 
+Consider a hydrogen atom where we take the electron's frame of reference as depicted in \cref{fig:soc-atom}.
+In this frame, the positively charged nucleus (a single proton in this case) revolves around the electron.
+This induces a magnetic field due to the moving proton, along the direction which is perpendicular to the plane of trajectory of the proton and whose magnitude is given by
+
+\begin{equation}
+    B = \frac{\mu_0 I}{2r}
+\end{equation}
+
+Each electron has an associated intrinsic spin, which induces a corresponding spin angular momentum.
+This spin also induces a spin magnetic dipole moment \( \vec{\mu}_s \), which is given by:
+
+\begin{equation} \label{eq:mu_sS}
+    \vec{\mu}_s = g_s \frac{e}{2m} \cdot \vec{S}
+\end{equation}
+
+where \( g_s \) is the Lande g-factor (\( \approx 2 \) for an electron) and \( \vec{S} \) is the spin angular momentum of the electron.
+
+This presents the scenario where the magnetic dipole is in presence of an external magnetic field (due to the moving proton) and hence will feel a torque \( \vec{\tau} \) which tries to align \( \vec{\mu}_s \) in the direction of \( \vec{B} \) and is given by
+
+\begin{equation}
+    \vec{\tau} = \vec{\mu}_s \times \vec{B}
+\end{equation}
+
+This torque \( \vec{\tau} \) will change the energy of the electron by an amount:
+
+\begin{equation} \label{eq:dipole-energy}
+    \Delta U = - \vec{\mu}_s \cdot \vec{B}
+\end{equation}
+
+
+\subsubsection{Spin Orbit Coupling (SOC)}
+
+Spin orbit coupling refers to the interaction between the spin angular momentum of electron and the orbital angular momentum of the atom.
+
+Referring to \cref{fig:soc-atom}, the orbital angular momentum \( \vec{L} = m \vec{r} \times \vec{v} \) of the atom is related to the magnetic field \( \vec{B} \) by
+
+\begin{equation} \label{eq:BL}
+    \vec{B} = \frac{\mu_0 Z e \vec{L}}{4 \pi m_e r^3}
+\end{equation}
+
+We see from \cref{eq:BL} and \cref{eq:mu_sS} that
+
+\begin{equation*}
+    \vec{\mu}_s \propto \vec{S} \quad \text{and} \quad \vec{B} \propto \vec{L}
+\end{equation*}
+
+Applying the above relations in \cref{eq:dipole-energy}, we get
+
+\begin{equation}
+    \Delta U \propto \vec{S} \cdot \vec{L}
+\end{equation}
+
+This means that orbital angular momentum of the nucleus and the spin angular momentum of the electron interact with each other, which results in the energy of the energy levels of the electrons in the atom.
+This is called the \underline{spin orbit interaction}.
 
 \section{Mechanisms behind the phenomena}
 
@@ -41,7 +100,8 @@ where \( \sigma^s_{xy} \) is the transverse conductivity due to spin current, \(
 Over the past century, the scientific community has agreed upon three plausible mechanisms responsible for SHE. These are categorized into extrinsic and intrinsic mechanisms. Let's dive into the details of the same.
 
 \begin{figure}[h!]
-    \includegraphics[width=\columnwidth]{she-mechanisms.png}
+    \centering
+    \includegraphics[scale=0.7]{she-mechanisms.png}
     \caption{Extrinsic scattering mechanisms responsible for SHE: (c) skew-scattering and (d) side jump\\ \vspace{0.2cm} \textit{Image credit: \cite{murakami2015spin}}}
 \end{figure}
 

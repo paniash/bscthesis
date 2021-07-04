@@ -59,20 +59,33 @@ Through this method, the layer of Cu and Pt are deposited on the Si$O_2$ wafer a
 
 \section{Detecting spin current}
 
+In the case of OHE, the charge imbalance across the edges of the slab results in a potential difference (Hall voltage) \( V_H \) across the width of the sample.
+This voltage can then simply be measured using a voltmeter.
+But in the case of SHE, how does one go about measuring spin imbalance?
+In such a case, there is no net charge transfer and hence conventional electrical measurements cannot be used directly.
+
+One plausible way would be to use an instrument to measure the difference in localized magnetization across the width of the slab.
+This can be achieved by using a superconducting quantum interference device microscope \cite{black1993magnetic} to measure local magnetic fields; the details into which we shall not go over for the sake of brevity.
+A potential difficulty that arises in this approach would be to eliminate the contribution of magnetic field due to the longitudinal current density \( j_x \), it being greater in magnitude would mask the magnetization along the edges due to spin polarized electrons \cite{hirsch1999spin}.
+
 We proceed to highlight a clever method to measure the spin current in a sample as proposed in \cite{hirsch1999spin}.
 
 \begin{figure}[h!]
     \includegraphics[width=\columnwidth]{hirsch.png}
-    \caption{Schematic diagram depicting method to measurement of spin current.\\ \vspace{0.2cm} \textit{Image courtesy: JE Hirsch. ``Spin Hall effect" (1999)}}
+    \caption{Schematic diagram depicting method to measurement of spin current.\\ \vspace{0.2cm} \textit{Image courtesy: JE Hirsch. ``Spin Hall effect" Phys. rev. letters (1999)}}
     \label{fig:hirsch-measure}
 \end{figure}
 
-As depicted in \cref{fig:hirsch-measure}, a transverse strip of metal (with high SOC) connects both the transverse ends of the slab.
+The same scattering mechanisms (refer \cref{sec:mechanisms}) responsible for the conversion of charge current to spin current in the first place, will also be responsible for the conversion in the reverse direction i.e. ISHE.
+This fact is exploited and we argue that by connecting a transverse strip across the slab would allow spin current to flow through it (as seen in \cref{fig:hirsch-measure}.
+
+We take this strip made of a material (metal) with high SOC, only then can one observe ISHE to convert spin polarized electrons to a charge imbalance across width of strip.
 Let charge current density \( j_x \) travel along the longitudinal direction.
 The width of the slab is \( L \) and the width of the transverse strip is \( l \).
+It is a necessary point to note that the width \( L \) cannot be more than the spin diffusion length \( \delta_s \) of the material of the slab.
+\( \delta_s \) is the maximum length of a material, upto which spin coherence of spin polarized electrons is maintained.
+Scattering mechanisms responsible for the phenomena, also lead to a loss of this spin coherence across a length scale given by \( \delta_s \), which is an intrinsic property of the material used.
 
-The same scattering mechanisms (refer \cref{sec:mechanisms}) responsible for the conversion of charge current to spin current in the first place, will also be responsible for the conversion in the reverse direction i.e. ISHE.
-This fact is exploited and the transverse metal strip is attached to the slab.
 As seen in the figure, charge current corresponding to \( j_x \) results in a spin imbalance across the edges of the slab due to SHE.
 This results in spin current\footnote{Described in the preliminary sections (refer \cref{sec:she})}.
 
@@ -80,12 +93,39 @@ This spin current moves in a perpendicular direction compared to \( j_x \) but i
 Via the same scattering mechanisms, the spin polarized electrons get preferentially scattered depending on the direction of their spins, resulting in a charge imbalance which is seen along the edges of the tranverse metal strip.
 This charge imbalance gives rise to a potential difference across the strip, which can be measured by conventional electrical instruments such as a voltmeter.
 
+\subsubsection{Mathematical formulation of spin voltage}
+
+The magnetization of a sample with \( n_{\downarrow} \) as the number density of spin polarized (spin down) electrons is given by
+
+\begin{equation}
+    M = n_{\downarrow} \mu_B
+\end{equation}
+
+where \( \mu_B \) is the Bohr magneton.
+
+Along with the longitudinal current density \( j_x \), we get an anomalous Hall voltage across the width of the sample as
+
+\begin{equation} \label{eq:ano-hall-voltage}
+    V_H = 4 R_s L j_x n_{\downarrow} \mu_B
+\end{equation}
+
+where \( R_s \) is the anomalous Hall coefficient and \( L \) is the transverse width of the slab.
+
+\Cref{eq:ano-hall-voltage} can be extended for non-magnetic materials with high SOC, where the number density of spin \( \downarrow \) and spin \( \uparrow \) electrons is equal, giving rise to a ``spin Hall voltage" \( V_{SH} \), whose sign depends on the direction of spin of the electrons.
+This gives us the corresponding expression as,
+
+\begin{equation}
+    V_{SH} = 2 \pi R_s L j_x n \mu_B
+\end{equation}
+
+where \( n \) is the total number density of conduction electrons and the rest of symbols have their usual meanings.
+
 
 \section{Measurement}
 
 After the sample is prepared, we pass electrical (pure charge) current through one arm of the \textit{H}-structure and make voltage measurements across the opposite ends of the sample, as shown in \cref{fig:measurement}. This is technically called a non-local measurement.
 
-\begin{figure}[!h]
+\begin{figure}
 \centering
     \begin{circuitikz}[american]
     \draw[thick] (0,0) rectangle (4,10);
@@ -105,10 +145,12 @@ After the sample is prepared, we pass electrical (pure charge) current through o
     to[V, l=$V$] (8,11);
     \draw (8,11) -- (8,5.25);
     \draw (8,5.25) -- (7,5.25);
-    \draw (-2.25,0) -- (75:3.5cm);
-    % \draw (1.25,3.25) -- (-2,0);
-    % \draw (1.25,3.25) -- (-0.25,4.75);
-    % \draw (-0.25,4.75) -- (
+    \begin{scope}[blue,xshift=-1.4cm,yshift=0.5cm,rotate=45]
+        \draw (0,0) -- (4,0) -- (4,2) -- (0,2);
+        \draw (10,0) -- (6,0) -- (6,2) -- (10,2);
+        \draw (4.5,-3) -- (4.5,0.8) -- (5.5,0.8) -- (5.5,-3);
+        \draw (4.5,5) -- (4.5,1.2) -- (5.5,1.2) -- (5.5,5);
+    \end{scope}
     \end{circuitikz}
     \caption{Pure charge current is supplied across the left arm and the potential difference is measured across the right arm of the sample.}
     \label{fig:measurement}
