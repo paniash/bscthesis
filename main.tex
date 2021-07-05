@@ -5,11 +5,11 @@ english, % ngerman for German
 singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-nohyperref, % Uncomment to not load the hyperref package
+%nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
-]{MastersDoctoralThesis} % The class file specifying the document structure
+]{thesis} % The class file specifying the document structure
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -30,7 +30,6 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{pgf}
 \usepackage{graphicx}
 \graphicspath{{./images/}}
-
 
 % render vectors in bold
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
@@ -115,20 +114,16 @@ headsepline, % Uncomment to get a line under the header
 \emph{Supervisor:} \\
 {\supname} % Supervisor name - remove the \href bracket to remove the link
 \end{flushright}
-\end{minipage}\\[3cm]
+\end{minipage}\\[2cm]
 
-\vfill
+\includegraphics[scale=0.1]{niser-logo.png} % University/department logo - uncomment to place it
 
 \large \textit{A report submitted in fulfillment of the requirements\\ for the course of \degreename}\\[0.3cm] % University requirement text
 \textit{in the}\\[0.4cm]
 \groupname\\\deptname\\[2cm] % Research group name and department name
 
-\vfill
+% {\large \today}\\[1cm] % Date
 
-{\large \today}\\[4cm] % Date
-%\includegraphics{Logo} % University/department logo - uncomment to place it
-
-\vfill
 \end{center}
 \end{titlepage}
 
@@ -157,10 +152,10 @@ headsepline, % Uncomment to get a line under the header
 \cleardoublepage
 
 % Abstract
-\include{abstract.tex}
+\include{abstract}
 
 % Acknowledgements
-\include{acknowledgements.tex}
+\include{acknowledgements}
 
 \tableofcontents % Prints the main table of contents
 
@@ -219,13 +214,12 @@ headsepline, % Uncomment to get a line under the header
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
 
-\include{chapters/chapter1}
-\include{chapters/chapter2}
-\include{chapters/chapter3}
-\include{chapters/chapter4}
-\include{chapters/chapter5}
-\include{chapters/chapter6}
-
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
 
 \printbibliography
 
