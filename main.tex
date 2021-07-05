@@ -36,7 +36,6 @@ headsepline, % Uncomment to get a line under the header
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 \newcommand{\Hst}{\textsc{H}-structure}
 
-
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \addbibresource{references.bib} % The filename of the bibliography
@@ -157,35 +156,11 @@ headsepline, % Uncomment to get a line under the header
 
 \cleardoublepage
 
-%%----------------------------------------------------------------------------------------
-%%	QUOTATION PAGE
-%%----------------------------------------------------------------------------------------
+% Abstract
+\include{abstract.tex}
 
-%\vspace*{0.2\textheight}
-
-%\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
-
-%\hfill Dave Barry
-
-%----------------------------------------------------------------------------------------
-%	ABSTRACT PAGE
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-This is your abstract.
-\end{abstract}
-
-%----------------------------------------------------------------------------------------
-%	ACKNOWLEDGEMENTS
-%----------------------------------------------------------------------------------------
-
-\begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-I would like to take this opportunity to thank my supervisor, Dr. Kartik Senapati, for supervising me for my sixth semester project. His guidance and constructive feedback helped me in improving my work.
-
-I would also like to especially thank my collaborator, Mr. Tapas Ranjan Senapati, who guided me in working with the instruments and made sure that I understood the relevant concepts required for the project.
-\end{acknowledgements}
+% Acknowledgements
+\include{acknowledgements.tex}
 
 \tableofcontents % Prints the main table of contents
 
