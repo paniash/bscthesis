@@ -99,15 +99,87 @@ This is called the \underline{spin-orbit interaction}.
 
 Over the past century, the scientific community has agreed upon three plausible mechanisms responsible for SHE. These are categorized into extrinsic and intrinsic mechanisms. Let's dive into the details of the same.
 
+\subsection{Extrinsic}
+
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.7]{she-mechanisms.png}
-    \caption{Extrinsic scattering mechanisms responsible for SHE: (c) skew-scattering and (d) side jump\\ \vspace{0.2cm} \textit{Image credit: \cite{murakami2015spin}}}
+    \caption{Extrinsic scattering mechanisms responsible for SHE: (c) skew-scattering and (d) side jump\\ \vspace{0.2cm} \textit{Image courtesy \cite{murakami2015spin}}}
+    \label{fig:skew-vs-side}
 \end{figure}
 
+We know that for a material to exhibit SHE, spin-orbit interaction is required. One such origin of SOC is due to impurities in the sample, giving to rise "extrinsic" mechanisms of the forms:
 
-\subsection{Extrinsic: Skew-scattering}
+\begin{enumerate}
+    \item Asymmetric scattering (skew-scattering)
+    \item Side-jump mechanism
+\end{enumerate}
 
-\subsection{Extrinsic: Side-jump}
+
+\subsection*{Skew-scattering}
+
+Particles with intrinsic spin in the presence of SOC, are preferentially scattered by a central potential \cite{mott1964w}.
+
+Let us consider a case in two dimensions i.e. \( x-y \) plane and that the impurities are spherically symmetric.
+In the presence of SOC, the impurities conserve orbital angular momentum \( L_z \) and spin angular momentum \( S_z \) separately.
+As the particles cross the vicinity of such impurities, the corresponding scattering cross-section depends on the relative sign of \( L_z \) and \( S_z \) along with the angle of scattering.
+For example, a greater ratio of spin \( \uparrow \) electrons will be scattered towards states of positive \( L_z \) (say) than towards states of negative \( L_z \).
+This would result in more spin \( \uparrow \) electrons getting scattered to the left than to the right.
+A similar analogy but opposite in direction, is applicable for spin \( \downarrow \) electrons.
+The direction of scattering also depends on the nature of interaction of the impurities i.e. if interaction between the impurity and electron is attractive or repulsive in nature.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.6]{skew-scattering-cls.png}
+    \caption{Semiclassical picture of skew-scattering mechanism\\ \vspace{0.2cm} \emph{Image courtesy: G. Vignale. "Ten Years of Spin Hall Effect".} }
+    \label{fig:semiskew}
+\end{figure}
+
+We proceed to calculate the contribution of skew-scattering towards SHE as described in \cite{Vignale_2009}.
+
+Let us introduce a Fermi distribution along the direction of charge current \( j_{c,x} \) where superscripts \( c \) and \( x \) denote pure charge current and direction of propagation respectively.
+An interesting analogy would be to consider an equivalent "spin electric field" \( E_{s,y} \) (refer \cref{fig:semiskew}) in the transverse direction which essentially pushes electrons in the \( y \) direction, with corresponding resistivity given as
+
+\begin{equation*}
+    \rho_{ss} = \frac{m^*}{ne^2 \tau_{ss}}
+\end{equation*}
+
+where \( n \) is the electron number density, and \( \tau_{ss}^{-1} \) is the skew scattering rate.
+This gives us the relation between the "spin electric field" and longitudinal charge current density as
+
+\begin{equation} \label{eq:spin-rho}
+    E_{s,y} = \rho_{ss} \: j_{c,x}
+\end{equation}
+
+The spin electric field is responsible for spin current along the transverse direction, which is related by the linear relation,
+
+\begin{equation} \label{eq:spin-drude}
+    j_{s,y} = \sigma_s E_{s,y}
+\end{equation}
+
+where \( \sigma_s \) is the spin conductivity and \( j_{s,y} \) is the corresponding spin current density in the \( y \) direction.
+
+Using simple Drude model, we also relate the longitudinal charge current density \( j_{c,x} \) and longitudinal conductivity \( \sigma_c \) by the relation
+
+\begin{equation} \label{eq:drude}
+    j_{c,x} = \sigma_c E_x
+\end{equation}
+
+where \( E_x \) is the corresponding electric field along \( x \) direction.
+
+Multiplying equations \ref{eq:spin-rho}, \ref{eq:spin-drude} and \ref{eq:drude}, and further cancelling common terms, we get contribution to SHE via skew-scattering as
+
+\begin{equation} \label{eq:skew-conductivity}
+    \boxed{\frac{j_{s,y}}{E_x} = \sigma_{ss}^{SHE} \equiv \sigma_s \rho_{ss} \sigma_c}
+\end{equation}
+
+
+\subsection*{Side-jump}
+
 
 \subsection{Intrinsic}
+
+As opposed to the extrinsic mechanisms described in earlier sections, the intrinsic mechanisms cause spin-dependent transverse scattering to occur due to the spin orbit interaction with the electronic band structure of the material.
+
+In the case of extrinsic mechanisms, a gain in transverse velocity is observed \emph{during} the scattering events.
+Meanwhile, in the case of intrinsic mechanisms, the transverse velocity gain is seen \emph{between} the scattering events \cite{hoffmann2013spin}.

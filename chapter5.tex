@@ -1,6 +1,11 @@
 \chapter{Results}
 
-% TODO: Mention variation of length and width of the layers
+We make the following measurements at varying:
+
+\begin{itemize}
+    \item thickness of Pt and Cu layers; (10 nm, 20 nm, $\ldots$ )
+    \item length and width of arm of the \Hst.
+\end{itemize}
 
 \label{chapter5}
 
@@ -18,14 +23,6 @@ As expected, we end up with a \textit{voltage-vs-temperature} curve which is cha
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{vt-normal.jpg}
-    \caption{}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[h!]
-    \centering
     \includegraphics[scale=0.5]{vt.jpg}
     \caption{Variation of voltage for a range of temperature (\( \approx 2 \: K \) to \( 10 \: K \) at constant currents 1 \( \mu \)A and 500 \( \mu \)A).}
     \label{fig:vt}
@@ -36,6 +33,14 @@ On measuring the voltage for a range of temperature (from 2 K to 10 K) at a cons
 \clearpage
 
 \begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{vt-normal.jpg}
+    \caption{Testing voltage as a function of temperature against background.}
+\end{figure}
+
+To check for if the poor accuracy in plot \ref{fig:vt} is due to stray background potential, we measure it at 0.3 \( \mu \)A, and observe that the variation in voltage shows no correspondence with plot \ref{fig:vt}.
+
+\begin{figure}[h!]
     \includegraphics[width=\columnwidth]{vh-compare.jpg}
     \caption{At \( T = 2 \) K, variation of potential difference as input current is varied from -2 mA to +2 mA.}
     \label{fig:vh-compare}
@@ -43,9 +48,11 @@ On measuring the voltage for a range of temperature (from 2 K to 10 K) at a cons
 
 On varying the input current from -2 mA to +2 mA at a temperature of 2 K, we observe that there is a random variation of non-local voltage measurement in \cref{fig:vh-compare} for a number of runs of the experiment. This unfortunately as well, yields no inferable data.
 
+\clearpage
+
 \subsection{Measurement via extrapolation in the presence of external \( B \) field}
 
-\begin{figure}
+\begin{figure}[!h]
     \input{nonlocal-with-field.pgf}
     \caption{Plot of voltage \( V \) vs external magnetic field \( B \), in presence of an external magnetic field}
     \label{fig:b-extrapolation}
