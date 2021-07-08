@@ -34,7 +34,7 @@ where \( \sigma^s_{xy} \) is the transverse conductivity due to spin current, \(
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.4]{soc.png}
-    \caption{Relative motion of nucleus around the electron.\\ \vspace{0.2cm} \textit{Image courtesy: Binghai Yan, ``Spin-orbit coupling: A relativistic effect", Summer school on ``Topological Matter States 2016"}}
+    \caption{Relative motion of nucleus around the electron.\\ \vspace{0.2cm} \textit{Image courtesy: Binghai Yan, ``Spin-orbit coupling: A relativistic effect", Summer school on ``Topological Matter States 2016''}}
     \label{fig:soc-atom}
 \end{figure}
 
@@ -103,8 +103,8 @@ Over the past century, the scientific community has agreed upon three plausible 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.7]{she-mechanisms.png}
-    \caption{Extrinsic scattering mechanisms responsible for SHE: (c) skew-scattering and (d) side jump\\ \vspace{0.2cm} \textit{Image courtesy \cite{murakami2015spin}}}
+    \includegraphics[scale=0.6]{she-mechanisms.png}
+    \caption{Extrinsic scattering mechanisms responsible for SHE: (c) skew-scattering and (d) side jump\\ \vspace{0.2cm} \textit{Image courtesy: \cite{murakami2015spin}}}
     \label{fig:skew-vs-side}
 \end{figure}
 
@@ -119,6 +119,7 @@ We know that for a material to exhibit SHE, spin-orbit interaction is required. 
 \subsection*{Skew-scattering}
 
 Particles with intrinsic spin in the presence of SOC, are preferentially scattered by a central potential \cite{mott1964w}.
+This central potential is due to the impurities in the sample.
 
 Let us consider a case in two dimensions i.e. \( x-y \) plane and that the impurities are spherically symmetric.
 In the presence of SOC, the impurities conserve orbital angular momentum \( L_z \) and spin angular momentum \( S_z \) separately.
@@ -176,6 +177,19 @@ Multiplying equations \ref{eq:spin-rho}, \ref{eq:spin-drude} and \ref{eq:drude},
 
 \subsection*{Side-jump}
 
+Similar to skew-scattering, this mechanism is extrinsic in nature and depends on the spin-orbit interaction with the impurities.
+
+However in contrast to skew-scattering, as seen from the schematic diagram in \cref{fig:skew-vs-side}, in this mechanism, there is a shift in the transverse component of velocity of the electrons, which arises from considering the electron as a wave packet (see \cref{fig:side}) with the collision, leading to an instantaneous change in the average momentum of the wave packet \cite{berger1970side}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.6]{packet.png}
+    \caption{A semiclassical diagram of side-jump mechanism during a head-on collision with an impurity.\\ \vspace{0.2cm} \emph{Image courtesy: G. Vignale. "Ten Years of Spin Hall Effect".}}
+    \label{fig:side}
+\end{figure}
+
+We shall not dive into the mathematical details of the mechanism for the sake of brevity.
+
 
 \subsection{Intrinsic}
 
@@ -183,3 +197,5 @@ As opposed to the extrinsic mechanisms described in earlier sections, the intrin
 
 In the case of extrinsic mechanisms, a gain in transverse velocity is observed \emph{during} the scattering events.
 Meanwhile, in the case of intrinsic mechanisms, the transverse velocity gain is seen \emph{between} the scattering events \cite{hoffmann2013spin}.
+
+We shall not go over the mathematical intricacies of the mechanism for the sake of brevity.

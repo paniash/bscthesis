@@ -27,7 +27,9 @@ We mentioned earlier in \cref{subsec:efficacy}, that as opposed to typical exper
 
 Each time such a conversion occurs, the efficiency is poor (even if Pt has good SOC), leading to a poor measurement data for detecting spin current. This low measurement is further diminished in our setup, since we go through a two-way conversion pathway.
 
-\subsection{Complications with a multilayered system}
+\subsection{Complications with multilayered systems}
+
+\label{subsec:multilayer}
 
 Multilayered samples have the issue of current moving disproportionately amongst layers as opposed to the desired quantity for a good measurement.
 These complicacies arise due to movement of current through the interface of two materials (this might cause some dissipation) or due to shunting (which happens in our sample, due to both the materials being metals), which is undesirable and causes poor efficacy in measurement of spin current \cite{maekawa2017spin}.
@@ -36,4 +38,15 @@ Ideally, one would like to use one material, which has good SOC to facilitate th
 
 \subsection{Thickness of layer}
 
-Having a thicker layer poses the risk of reducing the current density moving across the material, in addition to the additional resistance towards the movement of current.
+\label{subsec:thickness}
+
+Using a thicker layer in our sample introduces a reduction in the current density along with an increase in resistance against current.
+We strongly try to avoid the former, since a greater current density yields a greater spin imbalance via SHE and consequently, voltage reading that can be accurately measured.
+This can be seen via \cref{eq:thin-slab}, where a thinner slab yields better spin Hall voltage.
+
+\section{Scope for improvement}
+
+As mentioned in sections \ref{subsec:multilayer} and \ref{subsec:thickness}, during the next run of the experiment, we aim to use a bilayer instead of a trilayer, hence reducing the number of NM-HM metal interfaces by one.
+
+Also, the only purpose of the arm-link in the \Hst is to enable the flow of spin-polarized electrons in the form of spin current upto a greater distance, facilitated by the high spin diffusion length of Cu.
+Therefore, the support outer layers of Pt can be removed to concentrate all the spin current to flow through the middle layer of Cu.
