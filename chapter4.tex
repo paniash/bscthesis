@@ -16,7 +16,7 @@ Contrary to the above method, we do not generate pure spin current beforehand, b
 
 \section{Preparation of sample}
 
-We prepare a trilayer system, using copper (Cu) as the NM and platinum (Pt) as the HM. Here, we sandwich a layer of Cu between two layers of Pt. This is depicted in \cref{layers}.
+We prepare a trilayer system, using copper (Cu) as the NM and platinum (Pt) as the HM. Here, we sandwich a layer of Cu between two layers of Pt. This is depicted in \cref{fig:layers}.
 
 \begin{figure}
     \centering
@@ -247,6 +247,8 @@ After the sample is prepared, we pass electrical (pure charge) current through o
 
 \subsection{Efficacy of the measurement}
 
+\label{subsec:efficacy}
+
 As seen in \cref{subsec:spin-angle}, the efficiency of conversion of spin current to charge current and vice versa is related to the spin Hall angle of the material.
 However, this efficiency is very poor in practical laboratory environments.
 Earlier studies in measuring spin current \cite{valenzuela2007electrical}, involved using a ferromagnetic layer to generate the spin polarized electrons, giving rise to spin current which is converted to charge current further down the experiment via ISHE.
@@ -265,7 +267,14 @@ Referring back to \cref{fig:layers}, we see that the middle layer is Cu, sandwic
     \label{fig:layer-workflow}
 \end{figure}
 
+We now proceed to describe, the step-by-step process of the expected phenomena:
 
+\begin{enumerate}
+    \item Input charge current density \( J_c \) moves through the first arm of the \Hst.
+    \item Due to high SOC of Pt (the two outer layers), spin imbalance is observed along the edges of the Pt layers (via SHE), which then "seeps" into the Cu layer due to proximity effect. % TODO: Add footnote describing this phenomena.
+    \item Cu being a good conductor and having high spin diffusion length (about 200 nm), allows the spin current to propagate across the length of the arm-link layer, maintaining its spin.
+    \item At the other end of the \Hst, charge imbalance is generated via ISHE, which then leads to a potential difference on the right arm (as seen in \cref{fig:layer-workflow}), which we measure non-locally using a voltmeter.
+\end{enumerate}
 
 
 \subsection{Final step}
