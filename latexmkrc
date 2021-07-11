@@ -1,6 +1,6 @@
 $pdf_mode = 1;
 @default_files = ('main.tex');
-$silent = 1;
+$silent = 0;
 $show_time = 1;
 
 
