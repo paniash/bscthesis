@@ -15,11 +15,12 @@ After making the aforementioned measurements, we proceed to analyze the resultan
     \centering
     \includegraphics[scale=0.5]{vt-normal1.jpg}
     \caption{Variation of voltage as a function of temperature at constant input current.}
+    \label{fig:ohm}
 \end{figure}
 
-Before the experiment is begun, we test if the sample track works as one expects.
+Before the experiment is begun, we test if the sample track works as expected.
 We supply a fixed value of input current and make voltage measurements at various temperatures of the sample.
-As expected, we end up with a \textit{voltage-vs-temperature} curve which is characteristic to that of a metal (Cu/Pt).
+As expected, we end up with a \textit{voltage-vs-temperature} curve which is characteristic to that of a metal (Cu/Pt) (see \cref{fig:ohm}).
 
 \begin{figure}[h]
     \centering
@@ -34,17 +35,18 @@ On measuring the voltage for a range of temperature (from 2 K to 10 K) at a cons
     \centering
     \includegraphics[scale=0.5]{vt-normal.jpg}
     \caption{Testing voltage as a function of temperature against background.}
+    \label{fig:bg}
 \end{figure}
 
-To check for if the poor accuracy in plot \ref{fig:vt} is due to stray background potential, we measure it at 0.3 \( \mu \)A, and observe that the variation in voltage shows no correspondence with plot \ref{fig:vt}.
+To check if the poor accuracy in plot \ref{fig:vt} is due to stray background potential, we measure it at 0.3 \( \mu \)A, and observe that the variation in voltage in \cref{fig:bg} shows no correspondence with plot \ref{fig:vt}.
 
 \begin{figure}[h]
     \includegraphics[width=\columnwidth]{vh-compare.jpg}
-    \caption{At \( T = 2 \) K, variation of potential difference as input current is varied from -2 mA to +2 mA.}
+    \caption{At \( T = 2 \) K, variation of potential difference as input current is varied from -2 mA to +2 mA for a finite number of runs.}
     \label{fig:vh-compare}
 \end{figure}
 
-On varying the input current from -2 mA to +2 mA at a temperature of 2 K, we observe that there is a random variation of non-local voltage measurement in \cref{fig:vh-compare} for a number of runs of the experiment. This unfortunately as well, yields no inferable data.
+On varying the input current from -2 mA to +2 mA at a temperature of 2 K, we observe that there is a random variation of non-local voltage measurement in \cref{fig:vh-compare} for a finite number of runs of the experiment. This as well, yields no inferable data.
 
 \subsection{Measurement via extrapolation in the presence of external \( B \) field}
 
@@ -54,12 +56,12 @@ On varying the input current from -2 mA to +2 mA at a temperature of 2 K, we obs
     \label{fig:b-extrapolation}
 \end{figure}
 
-As suggested in \cref{subsubsec:extrapolation}, we expected to observe a predictable pattern which could then be extrapolated to find the intercept on the \( y \)-axix (voltage measurement).
-However, a very noisy data was observed with no scope for extrapolation (as seen in \cref{fig:b-extrapolation}).
+As suggested in \cref{subsubsec:extrapolation}, we expected to observe a predictable pattern which could then be extrapolated to find the intercept on the \( y \)-axis (voltage measurement).
+However, a very noisy data was observed with no scope for extrapolation (see \cref{fig:b-extrapolation}).
 
 
 \subsection{Inference}
 
 We notice that no significant deviation from the above measurement data is seen when varying the length of the arm-link of the \Hst, as long as the length is within the spin diffusion length of Cu.
 
-At varying thickness of the layers, as predicited in \cref{subsec:thickness} and \cref{eq:thin-slab}, we observe a better signal strength at a thickness of 10 nm, as compared to thicker slabs.
+At varying thickness of the layers, as predicted in \cref{subsec:thickness} and \cref{eq:thin-slab}, we observe a better signal strength at a thickness of 10 nm, as compared to thicker slabs.

@@ -1,4 +1,4 @@
-\chapter{The Hall effects}
+\chapter{The Hall Effects}
 
 \label{chapter2}
 
@@ -17,7 +17,7 @@ The experiment by Hall is shown in the figure below.
 
 \begin{figure}[h!]
     \includegraphics[width=0.7\columnwidth]{hall-effect-ashcroft.png}
-    \caption{Schematic diagram of the Hall effect\\ \textit{Image courtesy: Ashcroft \& Mermin, Solid State Physics}  }
+    \caption{Schematic diagram of the Hall effect\\ \textit{Image courtesy: Ashcroft \& Mermin, Solid State Physics}}
     \label{hall-figure}
 \end{figure}
 
@@ -128,7 +128,8 @@ This is followed by a secondary linear rise (with a lower gradient compared to t
 This is depicted in \cref{fig:hall-rho-linear}
 
 \begin{figure}[h!]
-    \includegraphics[width=\columnwidth]{hall-rho-hurd.png}
+    \centering
+    \includegraphics[scale=0.6]{hall-rho-hurd.png}
     \caption{Schematic behaviour of the Hall resistivity $ \rho_H $ as a function of magnetic induction $ \vec{B} $ in a metal showing appreciable magnetization.\\ \vspace{0.2cm} \textit{Image courtesy: C.M Hurd, The Hall effect in metals and alloys.} }
     \label{fig:hall-rho-linear}
 \end{figure}
@@ -151,14 +152,10 @@ where $ B $ is the applied magnetic field, $ R_0 $ is the ordinary Hall coeffici
 The first term in \cref{ahe} accounts for OHE and is characterized by the more familiar \cref{hall-resistivity}, whereas the second term is a characteristic of magnetic materials.
 This magnetization $ \vec{M} $ can be present even without the presence of an external magnetic field $ \vec{B} $, especially in ferromagnetic materials.
 
-Especially in the case of ferromagnets, $ R_s $ is experimentally found to be strongly temperature dependent.
+Especially in the case of ferromagnets, $ R_s $ is experimentally found to be strongly temperature dependent \cite{hurd2012hall}.
 
 
-
-
-
-
-
+% TODO: Finish up section on AHE.
 
 
 
@@ -189,8 +186,6 @@ This phenomena is very similar and analogous to OHE, the only difference being t
 A pure spin current can be defined as the flow of electrons of spin $ \uparrow $ moving in one direction and electrons of the opposite spin i.e. $ \downarrow $ electrons moving along the opposite direction.
 This results in no net charge current (since rate of movement of electrons in opposing directions is the same) and a net flow of angular momentum \cite{krishnan2016fundamentals}.
 
-\subsubsection{Mathematical analysis}
-
 From the continuity equation,
 
 \begin{equation} \label{continuity}
@@ -210,7 +205,8 @@ Analogously, we can define the spin current density $ \vec{J}_s $ with reference
 where $ \vec{M} $ is the magnetization (magnetic moment per unit volume) of the sample. The \cref{spin-current-density} defines the spin current density $ \vec{j}_s $ \cite{Uchida_2016}.
 
 \begin{figure}[h!]
-    \includegraphics[width=\columnwidth]{spin-current.png}
+    \centering
+    \includegraphics[scale=0.6]{spin-current.png}
     \caption{The total sum of rate of all charge variations across a surface is equal to the total current entering the surface.\\ \vspace{0.2cm} \textit{Image courtesy: "Spin Current", Ken-ichi Uchida and Eiji Saitoh}}
 \end{figure}
 
@@ -228,7 +224,7 @@ where $ \vec{T} $ is an indicator of the non-conservation of spin angular moment
 \label{sec:ishe}
 
 In contrast to SHE, the inverse Hall effect is essentially the same but SHE in reverse.
-When a pure spin current is injected into a material with high SOC (with no charge current), the same scattering mechanisms\footnote{Discussed in detail in the next chapter.} as the SHE, allow the spin-polarized electrons to preferentially scatter into opposite directions, leading to a charge imbalance across the edges of the material, thus resulting in a potential difference across the edges (in a tranverse fashion) \cite{d1971possibility}.
+When a pure spin current is injected into a material with high SOC (with no charge current), the same scattering mechanisms\footnote{Discussed in detail in the next chapter.} as the SHE, allow the spin-polarized electrons to preferentially scatter into opposite directions, leading to a charge imbalance across the edges of the material, thus resulting in a potential difference across the edges (in a transverse fashion) \cite{d1971possibility}.
 
 The spin $\uparrow$ electrons scatter along one direction and the spin $\downarrow$ electrons scatter along another direction. The surprising aspect about this, is that \textbf{both the directions are the same!}
 This leads to a pure charge current.
