@@ -1,9 +1,9 @@
-\documentclass[11pt,oneside,english,singlespacing,headsepline]{thesis}
+\documentclass[12pt,oneside,english,singlespacing,headsepline]{thesis}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage{tgschola}
+% \usepackage{tgschola}
 % \usepackage{mathpazo}
 % \usepackage{tgpagella} % mathpazo without math fonts
 
@@ -16,12 +16,16 @@
 \usepackage{circuitikz}
 \usepackage{microtype}
 \usepackage{pgf}
+\usepackage{tocloft}
 \usepackage{graphicx}
 \graphicspath{{./images/}}
 
 % render vectors in bold
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 \newcommand{\Hst}{\textsc{H}-structure}
+
+\renewcommand\cftchapafterpnum{\vskip10pt}
+\renewcommand\cftsecafterpnum{\vskip15pt}
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 
@@ -52,7 +56,7 @@
 \university{National Institute of Science Education and Research}
 \department{School of Physical Sciences}
 \group{Superconducting Spintronics Lab}
-\faculty{Dr. Kartik Senapati}
+\faculty{Prof. Kartik Senapati}
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle}
@@ -93,9 +97,10 @@
 
 \includegraphics[scale=0.1]{niser-logo.png}
 
-\large \textit{A report submitted in fulfillment of the requirements\\ for the course of \degreename}\\[0.3cm]
-\textit{in the}\\[0.4cm]
-\groupname\\\deptname\\[2cm]
+\large \textit{A report submitted in partial fulfillment of the requirements\\ for
+the course of P398 in the}\\[0.2cm]
+\groupname\\[0.1cm]
+\deptname\\[2cm]
 
 % {\large \today}\\[1cm] % Date
 
